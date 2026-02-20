@@ -1,75 +1,177 @@
-# React + TypeScript + Vite
+# 🚀 React + PHP + MySQL CRUD Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack CRUD (Create, Read, Update, Delete) web application built using **React (TypeScript)** for the frontend and **PHP + MySQL** for the backend API.
 
-Currently, two official plugins are available:
+This project demonstrates complete frontend-backend integration, REST API handling, routing, and database operations.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🛠 Tech Stack
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+### Frontend
+- React (TypeScript)
+- React Router DOM
+- Axios
+- CSS
 
-Note: This will impact Vite dev & build performances.
+### Backend
+- PHP (REST API)
+- MySQL
+- CORS Handling
 
-## Expanding the ESLint configuration
+### Tools
+- Git & GitHub
+- XAMPP (Apache + MySQL)
+- VS Code
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📂 Project Structure
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+react-php-crud/
+│
+├── frontend/ # React TypeScript Application
+│ ├── src/
+│ ├── package.json
+│
+├── backend/ # PHP REST API
+│ ├── api/
+│ ├── config/
+│
+└── README.md
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## ✨ Features
+
+- ✅ Create User
+- ✅ View All Users
+- ✅ Edit User
+- ✅ Delete User
+- ✅ REST API Integration
+- ✅ CORS Enabled Backend
+- ✅ Client-side Routing
+- ✅ Axios HTTP Requests
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone Repository
+
+
+git clone https://github.com/YOUR\_USERNAME/react-php-crud.git
+
+cd react-php-crud
+
+
+---
+
+### 2️⃣ Setup Backend (PHP)
+
+- Move `backend` folder inside your XAMPP `htdocs`
+- Start Apache & MySQL
+- Create a database in phpMyAdmin
+- Import SQL file (if provided)
+- Update database credentials in:
+
+
+backend/config/database.php
+
+
+---
+
+### 3️⃣ Setup Frontend (React)
+
+
+cd frontend
+npm install
+npm run dev
+
+
+Frontend runs on:
+
+http://localhost:5173
+
+
+Backend runs on:
+
+http://localhost/api/
+
+
+---
+
+## 🔄 API Endpoints
+
+| Method | Endpoint | Description |
+|--------|----------|------------|
+| GET | /api/user/list | Fetch all users |
+| POST | /api/user/save | Create new user |
+| GET | /api/user/{id} | Get single user |
+| PUT | /api/user/update/{id} | Update user |
+| DELETE | /api/user/delete/{id} | Delete user |
+
+---
+
+## 🔐 CORS Configuration
+
+To allow frontend communication, CORS headers are enabled in PHP:
+
+```php
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: Content-Type");
+header("Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, DELETE");
+
+;
+📸 Screenshots
+
+
+
+
+<img width="850" height="446" alt="image" src="https://github.com/user-attachments/assets/82304030-cad8-4807-b271-bb4e00d52d7c" />
+<img width="731" height="409" alt="image" src="https://github.com/user-attachments/assets/b4f5682c-4da4-428b-aca5-30ab0a507717" />
+
+
+🚀 Deployment
+
+Frontend can be deployed on:
+
+Vercel
+
+Netlify
+
+Backend can be deployed on:
+
+Render
+
+Railway
+
+Shared Hosting
+
+🎯 Learning Outcomes
+
+Full-stack architecture understanding
+
+Frontend ↔ Backend communication
+
+REST API development
+
+MySQL database integration
+
+CORS handling
+
+Git version control
+
+👨‍💻 Author
+
+Harsh Gavand
+BTech Information Technology Student
+
+📜 License
+
+This project is open-source and available under the MIT License.
+
+
+
